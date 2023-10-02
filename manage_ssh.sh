@@ -99,13 +99,13 @@ download_and_install_script() {
 
     # Check the user's choice
     if [ "$choice" == "y" ] || [ "$choice" == "Y" ]; then
-        # Download the script and store it in the home directory
-        curl -o "$HOME/$script_name" -L "$url"
+        # Download the script and store it in the pdw directory
+        curl -o "$PWD/$script_name" -L "$url"
         
         # Make the script executable
-        chmod +x "$HOME/$script_name"
+        chmod +x "$PWD/$script_name"
         
-        echo "Script $script_name has been downloaded and installed in $HOME."
+        echo "Script $script_name has been downloaded and installed in $PWD."
     else
         echo "Script installation canceled."
     fi
